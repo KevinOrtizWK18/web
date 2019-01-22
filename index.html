@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mi paginita</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <h1>Mi paginita</h1>
+    </div>
+    <div id="content">
+        <div id="nav">
+            <h2>Menu</h2>
+            <ul>
+                <li> <a href="" class="active" id="demo" >Inicio</a></li>
+                <li><a href="">Acerca de mi</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <h2>Inicio</h2>
+
+            <p> Soy Kevin Ortiz y soy <del>estudiante</del>. <span class="selected" id="dev"> developer</span>.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+    </div>
+    <div id="footer">
+        Partisan &copy; 2019.
+    </div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    $( document ).ready(function() {
+        console.log("ready!");
+        $('#demo').click(function(){
+            alert("Hola universo");
+        })
+    });
+</script>
+
+<script>
+
+    document.getElementById("dev").addEventListener("click", porencima);
+
+    function porencima() {
+
+        document.getElementById("dev").style.background = "red";
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+</head>
+<body>
+    <form method="post" id="form" data-parsley-validate>
+        <div id="error_name"></div>
+        Nombre: <input
+            type="text"
+            name="Nombre"
+            data-parsley-required
+            data-parsley-error-message="Este campo es obligatorio."
+            data-parsley-error-container="#error_name">
+        <br>
+        <br>
+        Apellidos: <input
+            type="text"
+            name="Apellidos"
+            data-parsley-required
+            data-parsley-error-message="Este campo es obligatorio.">
+        <br>
+
+        <div class="form-group">
+            <h5>Genero:</h5>
+            <select name='genero' class="form-control">
+               <option value="masculino" selected >Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div> <br>
+
+        <div class="form-group"
+             data-parsley-required
+             data-parsley-error-message="Este campo es obligatorio."
+             data-parsley-error-container="#error_edad"
+             >
+            <label>Rango de edad:</label> <br>
+            <label>
+                <input type="radio" name="Direccion"> 18 a 22 años
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="Direccion"> 23 a 28 años
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="Direccion"> 29 a 40 años
+            </label>
+            <br>
+        </div>
+        <div id="error_name"></div>
+        <br>
+        <label> Comentarios: </label> <br>
+        <textarea row="4" cols="50" required>
+        </textarea>
+        <br>
+        <br>
+    <div>
+        <label>
+            <input type="checkbox" name="Direccion" required> Si, acepto
+        </label> <br>
+    </div>
+        <br>
+        <br>
+        <input type="submit" value="Borrar" >
+        <input type="submit" value="Guardar" disable >
+    </form>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script typer="text/javascript" src="parsley.js"></script>
+    <script>
+        $( document ).ready(function() {
+            console.log("ready!");
+            $('#form').parsley{}
+        });
+    </script>
+
+</body>
+</html>
